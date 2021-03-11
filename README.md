@@ -7,5 +7,5 @@ Stub application in C# for a RESTful api app
 
 ---
 
-Copyright © May 11 2021
+Copyright © May 11 2021 <br/>
 MIT Copyright rules may apply.
