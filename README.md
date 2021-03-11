@@ -5,3 +5,7 @@ Stub application in C# for a RESTful api app
   1. Set default output to JSON (overridable via HTTP request)
   2. Created Hello World Controller, Model and test HTML page.
 
+---
+
+Copyright © May 11 2021
+MIT Copyright rules may apply.
