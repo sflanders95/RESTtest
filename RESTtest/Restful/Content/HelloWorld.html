@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <script src="../Scripts/jquery-3.3.1.min.js"></script>
+    <style>
+        table {border-spacing:1px;border-collapse:collapse;}
+        td,th {border:inset;padding:2px;}
+    </style>
+</head>
+<body>
+
+<table id="weather"></table>
+
+<script type="text/javascript">
+    $(function () {
+        $.getJSON('http://sflanders-pc.rediscov.local:9500/api/HelloWorld/22', function (weather) {
+            $(weather).each(function (i, item) {
+                $('#weather').append('<tr>' +
+                    '<td>' + item.ordinal + '</td>' +
+                    '<td>' + item.name + '</td>' +
+                    '<td>' + item.CurrentTime + '</td>' +
+                    '<td>' + item.randomString + '</td>' +
+                    '</tr>');
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
