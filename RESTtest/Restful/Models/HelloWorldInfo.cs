@@ -21,6 +21,9 @@ namespace Restful.Models
 
         [DataMember(Name = "randomString")]
         public string RandomStr { get; set; }
+        
+        [DataMember(Name = "data")]
+        public System.Data.DataTable { get; set; }
 
     }
 }
