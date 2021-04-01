@@ -29,7 +29,9 @@ namespace Restful.Controllers
 
             for (int i = 0; i < id; i++)
             {
-                list.Add(new Models.HelloWorldInfo() { Ordinal = i, Name = "Steve", time = DateTime.Now.AddMonths(i), RandomStr = "ASDFBWEasdg" });
+                list.Add(new Models.HelloWorldInfo() {
+                    Ordinal = i, Name = "Steve", time = DateTime.Now.AddMonths(i),
+                    RandomStr = $"{Guid.NewGuid()}", dataTable = Models.HelloWorldInfo.createDummyDataTable() });
             }
             return list;
         }
@@ -47,7 +49,10 @@ namespace Restful.Controllers
 
             for (int i = 0; i < id; i++)
             {
-                list.Add(new Models.HelloWorldInfo() { Ordinal = i, Name = $"{value}", time = DateTime.Now.AddMonths(i), RandomStr = "ASDFBWEasdg" });
+                list.Add(new Models.HelloWorldInfo() { Ordinal = i, Name = $"{value}",
+                    time = DateTime.Now.AddMonths(i), RandomStr = $"{Guid.NewGuid()}",
+                    dataTable = Models.HelloWorldInfo.createDummyDataTable()
+                });
             }
             return list;
         }
