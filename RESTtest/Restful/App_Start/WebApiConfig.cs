@@ -26,7 +26,8 @@ namespace Restful
             // config.Formatters.JsonFormatter.SupportedMediaTypes.Add(new MediaTypeHeaderValue("text/html"));
 
 
-            // Default to JSON output, can override by addiing "text/xml" in request header
+            // Default to JSON output, can override by addiing "text/xml" in request header 
+            // The Request Header ACCEPT can be set to either "application/json" "application/xml" for caller to override the output
             // Better way: https://stackoverflow.com/questions/9847564/how-do-i-get-asp-net-web-api-to-return-json-instead-of-xml-using-chrome
             config.Formatters.JsonFormatter.MediaTypeMappings.Add(new RequestHeaderMapping("Accept",
                 "text/html", StringComparison.InvariantCultureIgnoreCase, true, "application/json"));
